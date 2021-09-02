@@ -1,10 +1,9 @@
-
 import type { AppProps } from "next/app";
 import "nextra-theme-blog/style.css";
 import Head from "next/head";
 
 export default function Nextra({ Component, pageProps }: AppProps) {
-      return (
+  return (
     <>
       <Head>
         <link
