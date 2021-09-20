@@ -1,8 +1,8 @@
-const YEAR = new Date().getFullYear();
+const YEAR = new Date().getFullYear()
 
 export default {
   footer: (
-    <small style={{ display: "block", marginTop: "8rem" }}>
+    <small style={{ display: 'block', marginTop: '8rem' }}>
       <time>2020-{YEAR}</time> © nuts3745.
       <a href="/feed.xml">RSS</a>
       <style jsx>{`
@@ -17,5 +17,5 @@ export default {
         }
       `}</style>
     </small>
-  ),
-};
+  )
+}

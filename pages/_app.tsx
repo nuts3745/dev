@@ -1,6 +1,6 @@
-import type { AppProps } from "next/app";
-import "nextra-theme-blog/style.css";
-import Head from "next/head";
+import type { AppProps } from 'next/app'
+import Head from 'next/head'
+import 'nextra-theme-blog/style.css'
 
 export default function Nextra({ Component, pageProps }: AppProps) {
   return (
@@ -22,5 +22,5 @@ export default function Nextra({ Component, pageProps }: AppProps) {
       </Head>
       <Component {...pageProps} />
     </>
-  );
+  )
 }

@@ -1,24 +1,24 @@
 import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
   DocumentContext,
-} from "next/document";
+  Head,
+  Html,
+  Main,
+  NextScript
+} from 'next/document'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+    const initialProps = await Document.getInitialProps(ctx)
+    return { ...initialProps }
   }
 
   render() {
     const meta = {
-      title: "Blog",
-      description: "My Blog",
+      title: 'Blog',
+      description: 'My Blog',
       image:
-        "https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png",
-    };
+        'https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png'
+    }
 
     return (
       <Html lang="en">
@@ -40,8 +40,8 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
-export default MyDocument;
+export default MyDocument
