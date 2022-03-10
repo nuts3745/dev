@@ -6,6 +6,7 @@ export default function Nextra({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
+        <style>{`body { background-color: #f8f7f2 !important;}`}</style>
         <link
           rel="alternate"
           type="application/rss+xml"
@@ -19,6 +20,7 @@ export default function Nextra({ Component, pageProps }: AppProps) {
           type="font/woff2"
           crossOrigin="anonymous"
         />
+        <link rel="icon" href="favicon.svg" type="image/svg+xml" />
       </Head>
       <Component {...pageProps} />
     </>
