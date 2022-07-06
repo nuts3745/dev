@@ -14,8 +14,8 @@ class MyDocument extends Document {
 
   render() {
     const meta = {
-      title: 'Blog',
-      description: 'My Blog',
+      title: 'nuts3745.dev',
+      description: 'nuts3745.dev',
       image:
         'https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png'
     }
@@ -34,6 +34,16 @@ class MyDocument extends Document {
           <meta name="twitter:title" content={meta.title} />
           <meta name="twitter:description" content={meta.description} />
           <meta name="twitter:image" content={meta.image} />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

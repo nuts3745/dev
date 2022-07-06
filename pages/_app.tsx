@@ -14,13 +14,7 @@ export default function Nextra({ Component, pageProps }: AppProps) {
           title="RSS"
           href="/feed.xml"
         />
-        <link
-          rel="preload"
-          href="/fonts/Inter-roman.latin.var.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+
         <link rel="icon" href="favicon.svg" type="image/svg+xml" />
       </Head>
       <Component {...pageProps} />
