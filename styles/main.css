@@ -63,3 +63,14 @@ img.next-image {
 .nav-line .nav-link {
   color: #69778c;
 }
+
+.icons {
+  height: 40vh;
+  display: flex;
+  min-width: 350px;
+  gap: 2em;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
