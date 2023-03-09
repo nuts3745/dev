@@ -1,10 +1,17 @@
-/** @type {import('next').NextConfig} */
-module.exports = {
-  reactStrictMode: true
-}
-
 const withNextra = require('nextra')({
   theme: 'nextra-theme-blog',
   themeConfig: './theme.config.js'
 })
-module.exports = withNextra()
+
+/** @type {import('next').NextConfig} */
+module.exports = withNextra({
+  reactStrictMode: true,
+  webpack: (config, { isServer }) => {
+    config.experiments = {
+      asyncWebAssembly: true
+    }
+    config.output.webassemblyModuleFilename =
+      (isServer ? '../' : '') + 'static/wasm/webassembly.wasm'
+    return config
+  }
+})
