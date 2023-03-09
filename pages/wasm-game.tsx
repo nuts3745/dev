@@ -3,7 +3,7 @@ import wasmImage from 'scripts/wasm-game'
 
 type Props = {}
 
-export const WasmGame = (props: Props) => {
+const WasmGame = (props: Props) => {
   useEffect(() => {
     wasmImage('game-of-life')
   }, [])
@@ -26,3 +26,5 @@ export const WasmGame = (props: Props) => {
     </div>
   )
 }
+
+export default WasmGame
