@@ -7,7 +7,7 @@ export default function Nextra({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <style>{`body { background-color: #f8f7f2 !important;}`}</style>
+        {/* <style>{`body { background-color: #f8f7f2 !important;}`}</style> */}
         <link
           rel="alternate"
           type="application/rss+xml"

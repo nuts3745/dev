@@ -26,7 +26,7 @@
     "**/*.tsx",
     "scripts/gen-rss.js",
     "scripts/wasm-game.js"
-  ],
+, "pages/_app.mdx"  ],
   "exclude": [
     "node_modules"
   ]
