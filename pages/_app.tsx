@@ -7,7 +7,9 @@ export default function Nextra({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        {/* <style>{`body { background-color: #f8f7f2 !important;}`}</style> */}
+        <style>
+          {`@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');`}
+        </style>
         <link
           rel="alternate"
           type="application/rss+xml"

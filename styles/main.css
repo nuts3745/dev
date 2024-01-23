@@ -13,10 +13,11 @@ h6 {
 }
 h1 {
   font-size: 64px;
-  font-family: 'Gemunu Libre', sans-serif;
+  font-family: 'Silkscreen', sans-serif;
   text-align: center;
 }
 h2 {
+  font-family: 'Silkscreen', sans-serif;
   font-variation-settings: 'wght' 750;
 }
 
