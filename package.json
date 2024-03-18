@@ -18,7 +18,7 @@
     "rss": "latest"
   },
   "devDependencies": {
-    "@types/node": "20.11.10",
+    "@types/node": "20.11.28",
     "@types/react": "18.2.48",
     "eslint": "8.56.0",
     "eslint-config-next": "14.1.0",
