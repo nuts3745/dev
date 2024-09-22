@@ -3,9 +3,9 @@ import { memory } from 'scripts/wasm-game-of-life/pkg/wasm_game_of_life_bg.wasm'
 
 const wasmImage = (id) => {
   const CELL_SIZE = 5
-  const GRID_COLOR = '#CCCCCC'
-  const DEAD_COLOR = '#f8f7f2'
-  const ALIVE_COLOR = '#000000'
+  const GRID_COLOR = '#F8F7F2'
+  const DEAD_COLOR = '#F8F7F2'
+  const ALIVE_COLOR = '#333'
 
   const universe = Universe.new()
   const width = universe.width()
