@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import { WasmGame } from "../wasm-game.tsx";
+import { WasmGame } from "./wasm-game.tsx";
 import { FaGithub, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiScrapbox } from "react-icons/si";
