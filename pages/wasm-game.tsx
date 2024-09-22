@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import wasmImage from "scripts/wasm-game";
 
-export default const WasmGame = () => {
+const WasmGame = () => {
 	useEffect(() => {
 		wasmImage("game-of-life");
 	}, []);
@@ -11,3 +11,5 @@ export default const WasmGame = () => {
 		</div>
 	);
 };
+
+export default WasmGame;
