@@ -2,9 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import WasmGame from "./wasm-game";
-import { FaGithub, FaInstagram } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { SiScrapbox } from "react-icons/si";
+import { SiBluesky, SiGithub, SiInstagram, SiScrapbox } from "react-icons/si";
 import styles from "../styles/Home.module.css";
 
 type SocialLink = {
@@ -19,19 +17,19 @@ const COLOR = "black";
 
 const socialLinks: SocialLink[] = [
 	{
-		href: "https://twitter.com/heso_jp",
-		ariaLabel: "X",
-		icon: <FaXTwitter size={SIZE} color={COLOR} />,
+		href: "https://bsky.app/profile/nuts3745.dev",
+		ariaLabel: "Bluesky",
+		icon: <SiBluesky size={SIZE} color={COLOR} />,
 	},
 	{
 		href: "https://github.com/nuts3745",
 		ariaLabel: "GitHub",
-		icon: <FaGithub size={SIZE} color={COLOR} />,
+		icon: <SiGithub size={SIZE} color={COLOR} />,
 	},
 	{
 		href: "https://instagram.com/kohji.street",
 		ariaLabel: "Instagram",
-		icon: <FaInstagram size={SIZE} color={COLOR} />,
+		icon: <SiInstagram size={SIZE} color={COLOR} />,
 	},
 	{
 		href: "https://cosen.se/suzuki-log/",
