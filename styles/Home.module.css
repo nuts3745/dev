@@ -1,88 +1,88 @@
 .container {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
 .main {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 0.5rem;
-	justify-items: center;
-	align-content: center;
-	max-width: 600px;
-	width: 100%;
-	text-align: left;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  justify-items: center;
+  align-content: center;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
 }
 
 .wasmGameContainer {
-	display: flex;
-	justify-content: center;
-	gap: 1rem;
-	margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .socialNav {
-	display: flex;
-	justify-content: center;
-	gap: 1rem;
-	margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .socialLink {
-	color: inherit;
+  color: inherit;
 }
 
 .footer {
-	font-size: 0.8rem;
-	color: #666;
-	text-align: center;
-	margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+  margin-top: 2rem;
 }
 .container {
-	min-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
 .main {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 0.5rem;
-	justify-items: center;
-	align-content: center;
-	max-width: 600px;
-	width: 100%;
-	text-align: left;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  justify-items: center;
+  align-content: center;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
 }
 
 .wasmGameContainer {
-	display: flex;
-	justify-content: center;
-	gap: 1rem;
-	margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .socialNav {
-	display: flex;
-	justify-content: center;
-	gap: 1rem;
-	margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .socialLink {
-	color: inherit;
+  color: inherit;
 }
 
 .footer {
-	font-size: 0.8rem;
-	color: #666;
-	text-align: center;
-	margin-top: 2rem;
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+  margin-top: 2rem;
 }

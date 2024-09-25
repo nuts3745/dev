@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="50" fill="#333"/>
+  
+  <!-- Centered minimal n and caret shape -->
+  <g stroke="#F8F7F2" stroke-width="8" stroke-linecap="round" fill="none">
+    <!-- Left part of n (vertical line) -->
+    <line x1="32" y1="30" x2="32" y2="70" />
+    
+    <!-- Right part (caret shape aligned with left line) -->
+    <polyline points="62,70 75,50 62,30" />
+  </g>
+</svg>
