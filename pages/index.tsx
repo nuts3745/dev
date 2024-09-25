@@ -44,10 +44,10 @@ const Home: NextPage = () => {
       <Head>
         <title>nuts3745.dev</title>
         <meta name="description" content="nuts3745.dev" />
-        <link rel="icon" href="/public/favicon.ico" sizes="48x48" />
+        <link rel="icon" href="/favicon.ico" sizes="48x48" />
         <link
           rel="icon"
-          href="/public/favicon.svg"
+          href="/favicon.svg"
           sizes="any"
           type="image/svg+xml"
         />
