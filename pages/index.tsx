@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Link from "next/link";
-import { SiBluesky, SiGithub, SiInstagram, SiScrapbox } from "react-icons/si";
+import { SiBluesky, SiGithub, SiScrapbox } from "react-icons/si";
 import styles from "../styles/Home.module.css";
 import WasmGame from "./wasm-game";
 
