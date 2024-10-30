@@ -26,11 +26,6 @@ const socialLinks: SocialLink[] = [
     icon: <SiGithub size={SIZE} color={COLOR} />,
   },
   {
-    href: "https://instagram.com/kohji.street",
-    ariaLabel: "Instagram",
-    icon: <SiInstagram size={SIZE} color={COLOR} />,
-  },
-  {
     href: "https://cosen.se/suzuki-log/",
     ariaLabel: "Scrapbox",
     icon: <SiScrapbox size={SIZE} color={COLOR} />,
