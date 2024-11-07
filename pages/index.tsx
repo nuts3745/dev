@@ -37,7 +37,13 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <main className={styles.main}>
         <div className={styles.wasmGameContainer}>
-          <WasmGame />
+          <Link
+            key="Tutorial: Conway's Game of Life"
+            href="https://rustwasm.github.io/docs/book/game-of-life/introduction.html"
+            aria-label="Tutorial: Conway's Game of Life"
+          >
+            <WasmGame />
+          </Link>
         </div>
         <nav className={styles.socialNav}>
           {socialLinks.map((link) => (
