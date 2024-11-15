@@ -11,7 +11,7 @@ type SocialLink = {
 };
 
 const YEAR = new Date().getFullYear();
-const SIZE = 24;
+const SIZE = 34;
 const COLOR = "black";
 
 const socialLinks: SocialLink[] = [
@@ -26,7 +26,7 @@ const socialLinks: SocialLink[] = [
     icon: <SiGithub size={SIZE} color={COLOR} />,
   },
   {
-    href: "https://cosen.se/suzuki-log/",
+    href: "https://scrapbox.io/suzuki-log/",
     ariaLabel: "Scrapbox",
     icon: <SiScrapbox size={SIZE} color={COLOR} />,
   },
@@ -60,10 +60,7 @@ const Home: NextPage = () => {
       </main>
       <footer className={styles.footer}>
         <small>
-          <time>
-            {2020}-{YEAR}
-          </time>{" "}
-          © nuts3745.
+          Copyright © 2019-{YEAR} nuts3745 All rights reserved.
         </small>
       </footer>
     </div>
