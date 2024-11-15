@@ -62,7 +62,7 @@ const Home: NextPage = () => {
         <small>
           Copyright © 2019-{YEAR} nuts3745 All rights reserved.
           <br />
-          Icons by <Link href="https://simpleicons.org/" className={styles.footerLink}>Simple Icons</Link>
+          Icons by <Link href="https://github.com/simple-icons/simple-icons" className={styles.footerLink}>Simple Icons</Link>
         </small>
       </footer>
     </div>
