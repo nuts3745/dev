@@ -42,3 +42,8 @@
   text-align: center;
   margin-top: 2rem;
 }
+
+.footerLink {
+  color: inherit;
+  text-decoration: underline;
+}
