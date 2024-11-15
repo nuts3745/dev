@@ -61,7 +61,7 @@ const Home: NextPage = () => {
       <footer className={styles.footer}>
         <small>
           Copyright © 2019-{YEAR} nuts3745 All rights reserved.
-          {" · "}
+          <br />
           Icons by <Link href="https://simpleicons.org/" className={styles.footerLink}>Simple Icons</Link>
         </small>
       </footer>
