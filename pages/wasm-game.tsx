@@ -52,3 +52,5 @@ const WasmGame = () => {
     </div>
   );
 };
+
+export default WasmGame;
