@@ -20,6 +20,8 @@ const wasmImage = (id) => {
 
   const ctx = canvas.getContext("2d");
 
+  let animationFrameId;
+
   const sleep = (waitTime) =>
     new Promise((resolve) => setTimeout(resolve, waitTime));
   const renderLoop = async () => {
@@ -27,7 +29,7 @@ const wasmImage = (id) => {
     await sleep(888);
     drawGrid();
     drawCells();
-    requestAnimationFrame(renderLoop);
+    animationFrameId = requestAnimationFrame(renderLoop);
   };
 
   const drawGrid = () => {
@@ -75,7 +77,9 @@ const wasmImage = (id) => {
   drawGrid();
   drawCells();
   requestAnimationFrame(renderLoop);
-  return canvas;
+  return () => {
+    if (animationFrameId) cancelAnimationFrame(animationFrameId);
+  };
 };
 
 export default wasmImage;
