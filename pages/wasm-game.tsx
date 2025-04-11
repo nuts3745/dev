@@ -1,30 +1,16 @@
-import React, { useEffect } from 'react'
-import wasmImage from 'scripts/wasm-game'
+import React, { useEffect } from "react";
+import wasmImage from "scripts/wasm-game";
 
-type Props = {}
-
-const WasmGame = (props: Props) => {
+const WasmGame = () => {
   useEffect(() => {
-    wasmImage('game-of-life')
-  }, [])
+    const cleanup = wasmImage("game-of-life");
+    return cleanup;
+  }, []);
   return (
-    <div
-      style={{
-        position: 'relative',
-        top: '0',
-        left: '0',
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center'
-      }}
-    >
-      {' '}
-      <canvas id="game-of-life" />{' '}
+    <div>
+      <canvas id="game-of-life" />
     </div>
-  )
-}
+  );
+};
 
-export default WasmGame
+export default WasmGame;

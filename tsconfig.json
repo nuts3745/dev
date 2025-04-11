@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -25,9 +21,8 @@
     "**/*.ts",
     "**/*.tsx",
     "scripts/gen-rss.js",
-    "scripts/wasm-game.js"
-, "pages/_app.mdx"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "scripts/wasm-game.js",
+    "pages/_app.mdx"
+  ],
+  "exclude": ["node_modules"]
 }
