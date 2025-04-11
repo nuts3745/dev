@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SiBluesky, SiGithub, SiScrapbox } from "react-icons/si";
 import styles from "../styles/Home.module.css";
 import WasmGame from "./wasm-game";
+import Head from "next/head";
 
 type SocialLink = {
   href: string;
@@ -35,6 +36,9 @@ const socialLinks: SocialLink[] = [
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
+      <Head>
+        <title>nuts3745.dev</title>
+      </Head>
       <main className={styles.main}>
         <div className={styles.wasmGameContainer}>
           <Link
