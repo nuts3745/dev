@@ -41,13 +41,7 @@ const Home: NextPage = () => {
       </Head>
       <main className={styles.main}>
         <div className={styles.wasmGameContainer}>
-          <Link
-            key="Tutorial: Conway's Game of Life"
-            href="https://rustwasm.github.io/docs/book/game-of-life/introduction.html"
-            aria-label="Tutorial: Conway's Game of Life"
-          >
-            <WasmGame />
-          </Link>
+          <WasmGame />
         </div>
         <nav className={styles.socialNav}>
           {socialLinks.map((link) => (
@@ -66,7 +60,13 @@ const Home: NextPage = () => {
         <small>
           Copyright © 2019-{YEAR} nuts3745 All rights reserved.
           <br />
-          Icons by <Link href="https://github.com/simple-icons/simple-icons" className={styles.footerLink}>Simple Icons</Link>
+          Icons by{" "}
+          <Link
+            href="https://github.com/simple-icons/simple-icons"
+            className={styles.footerLink}
+          >
+            Simple Icons
+          </Link>
         </small>
       </footer>
     </div>

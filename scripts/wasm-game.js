@@ -74,6 +74,41 @@ const wasmImage = (id) => {
     ctx.stroke();
   };
 
+  // メモリを直接操作してセルの状態を切り替える
+  const toggleCell = (row, col) => {
+    const cellsPtr = universe.cells();
+    const cells = new Uint8Array(memory.buffer, cellsPtr, width * height);
+    const idx = getIndex(row, col);
+
+    // セルの状態を反転（生きている→死、死んでいる→生）
+    cells[idx] = cells[idx] === Cell.Dead ? Cell.Alive : Cell.Dead;
+
+    // 変更をすぐに反映
+    drawCells();
+  };
+
+  // キャンバス上のクリック位置からセルの行と列を計算
+  const getCellPosition = (event) => {
+    const boundingRect = canvas.getBoundingClientRect();
+
+    const scaleX = canvas.width / boundingRect.width;
+    const scaleY = canvas.height / boundingRect.height;
+
+    const canvasLeft = (event.clientX - boundingRect.left) * scaleX;
+    const canvasTop = (event.clientY - boundingRect.top) * scaleY;
+
+    const row = Math.min(Math.floor(canvasTop / (CELL_SIZE + 1)), height - 1);
+    const col = Math.min(Math.floor(canvasLeft / (CELL_SIZE + 1)), width - 1);
+
+    return { row, col };
+  };
+
+  // クリックイベントハンドラ
+  canvas.addEventListener("click", (event) => {
+    const { row, col } = getCellPosition(event);
+    toggleCell(row, col);
+  });
+
   drawGrid();
   drawCells();
   requestAnimationFrame(renderLoop);
