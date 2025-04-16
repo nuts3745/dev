@@ -4,19 +4,28 @@ import {
 } from "scripts/wasm-game-of-life/pkg/wasm_game_of_life";
 import { memory } from "scripts/wasm-game-of-life/pkg/wasm_game_of_life_bg.wasm";
 
-const wasmImage = (id) => {
-  const CELL_SIZE = 5;
-  const GRID_COLOR = "#F8F7F2";
-  const DEAD_COLOR = "#F8F7F2";
-  const ALIVE_COLOR = "#333";
+const defaultOptions = {
+  cellSize: 5,
+  gridColor: "#F8F7F2",
+  deadColor: "#F8F7F2",
+  aliveColor: "#333",
+  sleepTime: 678,
+};
+
+const wasmImage = (id, options = defaultOptions) => {
+  const cellSize = options.cellSize;
+  const gridColor = options.gridColor;
+  const deadColor = options.deadColor;
+  const aliveColor = options.aliveColor;
+  const sleepTime = options.sleepTime;
 
   const universe = Universe.new();
   const width = universe.width();
   const height = universe.height();
 
   const canvas = document.getElementById(id);
-  canvas.height = (CELL_SIZE + 1) * height + 1;
-  canvas.width = (CELL_SIZE + 1) * width + 1;
+  canvas.height = (cellSize + 1) * height + 1;
+  canvas.width = (cellSize + 1) * width + 1;
 
   const ctx = canvas.getContext("2d");
 
@@ -26,7 +35,7 @@ const wasmImage = (id) => {
     new Promise((resolve) => setTimeout(resolve, waitTime));
   const renderLoop = async () => {
     universe.tick();
-    await sleep(888);
+    await sleep(sleepTime);
     drawGrid();
     drawCells();
     animationFrameId = requestAnimationFrame(renderLoop);
@@ -34,16 +43,16 @@ const wasmImage = (id) => {
 
   const drawGrid = () => {
     ctx.beginPath();
-    ctx.strokeStyle = GRID_COLOR;
+    ctx.strokeStyle = gridColor;
 
     for (let i = 0; i <= width; i++) {
-      ctx.moveTo(i * (CELL_SIZE + 1) + 1, 0);
-      ctx.lineTo(i * (CELL_SIZE + 1) + 1, (CELL_SIZE + 1) * height + 1);
+      ctx.moveTo(i * (cellSize + 1) + 1, 0);
+      ctx.lineTo(i * (cellSize + 1) + 1, (cellSize + 1) * height + 1);
     }
 
     for (let j = 0; j <= height; j++) {
-      ctx.moveTo(0, j * (CELL_SIZE + 1) + 1);
-      ctx.lineTo((CELL_SIZE + 1) * width + 1, j * (CELL_SIZE + 1) + 1);
+      ctx.moveTo(0, j * (cellSize + 1) + 1);
+      ctx.lineTo((cellSize + 1) * width + 1, j * (cellSize + 1) + 1);
     }
 
     ctx.stroke();
@@ -62,12 +71,12 @@ const wasmImage = (id) => {
       for (let col = 0; col < width; col++) {
         const idx = getIndex(row, col);
 
-        ctx.fillStyle = cells[idx] === Cell.Dead ? DEAD_COLOR : ALIVE_COLOR;
+        ctx.fillStyle = cells[idx] === Cell.Dead ? deadColor : aliveColor;
         ctx.fillRect(
-          col * (CELL_SIZE + 1) + 1,
-          row * (CELL_SIZE + 1) + 1,
-          CELL_SIZE,
-          CELL_SIZE,
+          col * (cellSize + 1) + 1,
+          row * (cellSize + 1) + 1,
+          cellSize,
+          cellSize,
         );
       }
     }
@@ -97,8 +106,8 @@ const wasmImage = (id) => {
     const canvasLeft = (event.clientX - boundingRect.left) * scaleX;
     const canvasTop = (event.clientY - boundingRect.top) * scaleY;
 
-    const row = Math.min(Math.floor(canvasTop / (CELL_SIZE + 1)), height - 1);
-    const col = Math.min(Math.floor(canvasLeft / (CELL_SIZE + 1)), width - 1);
+    const row = Math.min(Math.floor(canvasTop / (cellSize + 1)), height - 1);
+    const col = Math.min(Math.floor(canvasLeft / (cellSize + 1)), width - 1);
 
     return { row, col };
   };

@@ -50,6 +50,9 @@ const Home: NextPage = () => {
               href={link.href}
               aria-label={link.ariaLabel}
               className={styles.socialLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={link.ariaLabel}
             >
               {link.icon}
             </Link>
@@ -64,6 +67,10 @@ const Home: NextPage = () => {
           <Link
             href="https://github.com/simple-icons/simple-icons"
             className={styles.footerLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Simple Icons"
+            aria-label="Simple Icons"
           >
             Simple Icons
           </Link>
