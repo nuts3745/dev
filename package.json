@@ -6,21 +6,28 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "next": "^15.3.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-icons": "^5.3.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@testing-library/react": "^14.2.1",
     "@types/node": "^22.14.0",
     "@types/react": "^19.1.0",
+    "@vitest/coverage-v8": "^1.4.0",
+    "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^9.24.0",
     "eslint-config-next": "^15.3.0",
+    "happy-dom": "^12.10.3",
     "prettier": "^3.5.3",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "vitest": "^1.4.0"
   }
 }
