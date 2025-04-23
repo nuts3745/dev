@@ -12,7 +12,7 @@ const defaultOptions = {
   sleepTime: 678,
 };
 
-const wasmImage = (id, options = defaultOptions) => {
+const wasmImage = (id: string, options = defaultOptions) => {
   const cellSize = options.cellSize;
   const gridColor = options.gridColor;
   const deadColor = options.deadColor;
@@ -24,14 +24,20 @@ const wasmImage = (id, options = defaultOptions) => {
   const height = universe.height();
 
   const canvas = document.getElementById(id);
+  if (!(canvas instanceof HTMLCanvasElement)) {
+    throw new Error("Canvas not found");
+  }
   canvas.height = (cellSize + 1) * height + 1;
   canvas.width = (cellSize + 1) * width + 1;
 
   const ctx = canvas.getContext("2d");
+  if (!ctx) {
+    throw new Error("Failed to get canvas context");
+  }
 
-  let animationFrameId;
+  let animationFrameId: number;
 
-  const sleep = (waitTime) =>
+  const sleep = (waitTime: number) =>
     new Promise((resolve) => setTimeout(resolve, waitTime));
   const renderLoop = async () => {
     universe.tick();
@@ -58,7 +64,7 @@ const wasmImage = (id, options = defaultOptions) => {
     ctx.stroke();
   };
 
-  const getIndex = (row, column) => {
+  const getIndex = (row: number, column: number) => {
     return row * width + column;
   };
 
@@ -84,7 +90,7 @@ const wasmImage = (id, options = defaultOptions) => {
   };
 
   // メモリを直接操作してセルの状態を切り替える
-  const toggleCell = (row, col) => {
+  const toggleCell = (row: number, col: number) => {
     const cellsPtr = universe.cells();
     const cells = new Uint8Array(memory.buffer, cellsPtr, width * height);
     const idx = getIndex(row, col);
@@ -92,12 +98,18 @@ const wasmImage = (id, options = defaultOptions) => {
     // セルの状態を反転（生きている→死、死んでいる→生）
     cells[idx] = cells[idx] === Cell.Dead ? Cell.Alive : Cell.Dead;
 
-    // 変更をすぐに反映
-    drawCells();
+    // 変更されたセルのみを再描画
+    ctx.fillStyle = cells[idx] === Cell.Dead ? deadColor : aliveColor;
+    ctx.fillRect(
+      col * (cellSize + 1) + 1,
+      row * (cellSize + 1) + 1,
+      cellSize,
+      cellSize,
+    );
   };
 
   // キャンバス上のクリック位置からセルの行と列を計算
-  const getCellPosition = (event) => {
+  const getCellPosition = (event: MouseEvent) => {
     const boundingRect = canvas.getBoundingClientRect();
 
     const scaleX = canvas.width / boundingRect.width;
