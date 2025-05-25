@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Link from "next/link";
 import { SiBluesky, SiGithub, SiScrapbox } from "react-icons/si";
+import { LuTestTubeDiagonal } from "react-icons/lu";
 import styles from "../styles/Home.module.css";
 import WasmGame from "./wasm-game";
 import Head from "next/head";
@@ -31,6 +32,11 @@ const socialLinks: SocialLink[] = [
     ariaLabel: "Scrapbox",
     icon: <SiScrapbox size={SIZE} color={COLOR} />,
   },
+  {
+    href: "https://lab.nuts3745.dev",
+    ariaLabel: "Laboratory",
+    icon: <LuTestTubeDiagonal size={SIZE} color={COLOR} />
+  }
 ];
 
 const Home: NextPage = () => {
