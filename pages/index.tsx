@@ -6,10 +6,18 @@ import styles from "../styles/Home.module.css";
 import WasmGame from "./wasm-game";
 import Head from "next/head";
 
+type portfolioLinks =
+  | "https://bsky.app/profile/nuts3745.dev"
+  | "https://github.com/nuts3745"
+  | "https://scrapbox.io/suzuki-log/"
+  | "https://lab.nuts3745.dev";
+type linkTarget = "_blank" | "_self";
+type linkDescription = "Bluesky" | "GitHub" | "Scrapbox" | "Laboratory";
 type SocialLink = {
-  href: string;
-  ariaLabel: string;
+  href: portfolioLinks;
+  ariaLabel: linkDescription;
   icon: React.ReactNode;
+  target: linkTarget;
 };
 
 const YEAR = new Date().getFullYear();
@@ -21,21 +29,25 @@ const socialLinks: SocialLink[] = [
     href: "https://bsky.app/profile/nuts3745.dev",
     ariaLabel: "Bluesky",
     icon: <SiBluesky size={SIZE} color={COLOR} />,
+    target: "_blank",
   },
   {
     href: "https://github.com/nuts3745",
     ariaLabel: "GitHub",
     icon: <SiGithub size={SIZE} color={COLOR} />,
+    target: "_blank",
   },
   {
     href: "https://scrapbox.io/suzuki-log/",
     ariaLabel: "Scrapbox",
     icon: <SiScrapbox size={SIZE} color={COLOR} />,
+    target: "_blank",
   },
   {
     href: "https://lab.nuts3745.dev",
     ariaLabel: "Laboratory",
-    icon: <LuTestTubeDiagonal size={SIZE} color={COLOR} />
+    icon: <LuTestTubeDiagonal size={SIZE} color={COLOR} />,
+    target: "_self",
   }
 ];
 
@@ -56,8 +68,8 @@ const Home: NextPage = () => {
               href={link.href}
               aria-label={link.ariaLabel}
               className={styles.socialLink}
-              target="_blank"
               rel="noopener noreferrer"
+              target={link.target}
               title={link.ariaLabel}
             >
               {link.icon}

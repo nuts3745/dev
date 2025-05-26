@@ -6,7 +6,6 @@ class MyDocument extends Document {
       <Html lang="ja">
         <Head>
           <meta name="description" content="nuts3745.dev" />
-          <link rel="icon" href="/favicon.ico" sizes="48x48" />
           <link
             rel="icon"
             href="/favicon.svg"
