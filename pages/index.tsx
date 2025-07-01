@@ -10,7 +10,7 @@ type portfolioLinks =
   | "https://bsky.app/profile/nuts3745.dev"
   | "https://github.com/nuts3745"
   | "https://scrapbox.io/suzuki-log/"
-  | "https://lab.nuts3745.dev";
+  | "https://labs.nuts3745.dev";
 type linkTarget = "_blank" | "_self";
 type linkDescription = "Bluesky" | "GitHub" | "Scrapbox" | "Laboratory";
 type SocialLink = {
@@ -44,7 +44,7 @@ const socialLinks: SocialLink[] = [
     target: "_blank",
   },
   {
-    href: "https://lab.nuts3745.dev",
+    href: "https://labs.nuts3745.dev",
     ariaLabel: "Laboratory",
     icon: <LuTestTubeDiagonal size={SIZE} color={COLOR} />,
     target: "_self",
