@@ -2,6 +2,10 @@
   "name": "nuts3745-dev",
   "version": "0.2.0",
   "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -29,6 +33,7 @@
     "happy-dom": "^18.0.0",
     "prettier": "^3.5.3",
     "typescript": "^5.8.3",
+    "vite": "^7.0.0",
     "vitest": "^3.1.1"
   }
 }
