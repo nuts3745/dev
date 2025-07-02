@@ -1,5 +1,9 @@
-/** @type {import('next').NextConfig} */
-module.exports = {
+// @ts-check
+
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
   reactStrictMode: true,
   output: "export",
   webpack: (config, { isServer }) => {
@@ -9,8 +13,7 @@ module.exports = {
     };
     config.output.webassemblyModuleFilename = `${isServer ? "../" : ""}static/wasm/webassembly.wasm`;
     return config;
-  },
-  images: {
-    unoptimized: true,
-  },
+  }
 };
+
+export default nextConfig
