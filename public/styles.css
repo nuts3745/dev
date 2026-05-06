@@ -196,7 +196,7 @@ dd {
 }
 
 .profile-panel::before {
-  content: "PROFILE / ABSTRACTED RESUME";
+  content: "PROFILE";
   position: absolute;
   top: 0;
   right: 0;
